@@ -22,20 +22,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mButton1 = (Button)findViewById(R.id.button_logon);
         mButton2 = (Button)findViewById(R.id.button_login);
         mButton1.setOnClickListener(this);
-        /*mButton1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this,LogonActivity.class);
-                startActivity(intent);
-            }
-        });
-        mButton2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent (MainActivity.this,LoginActivity.class);
-                startActivity(intent);
-            }
-        });*/
+        mButton2.setOnClickListener(this);
     }
 
 
@@ -43,7 +30,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.button_logon:
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
+                Intent intent = new Intent(MainActivity.this, LogonActivity.class);
                 startActivity(intent);
                 break;
             case R.id.button_login:
